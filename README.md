@@ -1,8 +1,8 @@
-Quick HOWTO: Unit Testing with Mocha and Grunt
-======
+## Quick HOWTO: Unit Testing with Mocha and Grunt
 
-Step 1
-----------
+
+### Step 1
+
 In the root directory of your project create `package.json` with the following content:
 
 ```json
@@ -19,8 +19,8 @@ In the root directory of your project create `package.json` with the following c
 }
 ```
 
-Step 2
-----------
+### Step 2
+
 Install the depenedencies:
 ```
 npm install
@@ -28,8 +28,8 @@ npm install -g grunt
 # if the above command requires root access, prepend "sudo" 
 ```
 
-Step 3
-----------
+### Step 3
+
 In the root directory of your project create `Gruntfile.js` with the following content:
 ```javascript
 module.exports = function (grunt) {
@@ -45,10 +45,10 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['mochacli']);
 };
 ```
+Grunt is already configured and the command `grunt` should return no errors.
 
+### Step 4
 
-Step 4
-----------
 Write and run the unit tests. Sample code:
 
 * The code to be tested: create the directory `./helpers/geo/` and the file
@@ -80,7 +80,7 @@ function rad2deg(angle) {
 module.exports = {getDistance: getDistance};
 ```
 
-* The unit tests for the code: create the directory `./tests/helpers/geo` and the file
+* The unit tests for the above code: create the directory `./tests/helpers/geo` and the file
 `common.js` in it with this content:
 ```javascript
 describe('GeoLocation', function () {
