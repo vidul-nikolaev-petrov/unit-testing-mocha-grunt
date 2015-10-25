@@ -1,0 +1,11 @@
+{
+    "name": "s8net-helpers",
+    "description": "helpers testing",
+    "version": "0.0.1",
+    "devDependencies": {
+        "expect.js": "^0.3.1",
+        "grunt": "latest",
+        "grunt-mocha-cli": "^2.0.0",
+        "phantomjs": "^1.9.8"
+    }
+}
