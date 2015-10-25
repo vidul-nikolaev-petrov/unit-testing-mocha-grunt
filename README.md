@@ -5,7 +5,7 @@ Step 1
 ----------
 In the root directory of your project create `package.json` with the following content:
 
-```
+```json
 {
     "name": "helpers",
     "description": "helpers testing",
@@ -31,7 +31,7 @@ npm install -g grunt
 Step 3
 ----------
 In the root directory of your project create `Gruntfile.js` with the following content:
-```
+```javascript
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -53,7 +53,7 @@ Write and run the unit tests. Sample code:
 
 * The code to be tested: create the directory `./helpers/geo/` and the file
 `common.js` in it with this content:
-```
+```javascript
 // get the distance between two geolocations
 var radius$ = 6371; // the Earth radius
 
@@ -82,7 +82,7 @@ module.exports = {getDistance: getDistance};
 
 * The unit tests for the code: create the directory `./tests/helpers/geo` and the file
 `common.js` in it with this content:
-```
+```javascript
 describe('GeoLocation', function () {
     var Geo = require('../../../helpers/geo/common.js'),
         expect = require('expect.js'),
